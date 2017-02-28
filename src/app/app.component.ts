@@ -32,7 +32,7 @@ export class AppComponent {
 		this.numerology += this.numbermap[v];
 	    }
 	}
-	this.sum = this.numerology % 9;
+	this.sum = this.numerology % 9 || 9;
     }
     constructor() {
 	Object.keys(this.numbers).forEach((k) => {
