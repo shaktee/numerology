@@ -11,23 +11,24 @@ export class AppComponent {
     numerology = 0;
     sum = 0;
     numbers = {'aijqy1': 1,
-	       'bkr2'  : 2,
-	       'cgls3' : 3,
-	       'dmt4'  : 4,
-	       'ehnx5' : 5,
-	       'uvw6'  : 6,
-	       'oz7'   : 7,
-	       'fp8'   : 8,
-	       '9'     : 9,
-	       '0'     : 0
+               'bkr2'  : 2,
+               'cgls3' : 3,
+               'dmt4'  : 4,
+               'ehnx5' : 5,
+               'uvw6'  : 6,
+               'oz7'   : 7,
+               'fp8'   : 8,
+               '9'     : 9,
+               '0'     : 0
 	      };
     numbermap: any  = {};
 
     update(val: string) {
 	this.numerology = 0;
+	let keys = Object.keys(this.numbermap);
 	for (let x = 0; x < val.length; x++) {
 	    let v = val[x].toLowerCase();
-	    if (Object.keys(this.numbermap).indexOf(v) != -1) {
+	    if (keys.indexOf(v) != -1) {
 		this.numerology += this.numbermap[v];
 	    }
 	}
